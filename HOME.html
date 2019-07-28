@@ -1,0 +1,46 @@
+<html>
+<head>
+	<title>SGP</title>
+	<meta name= viewport content= "width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css\home.css">
+	<link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('.menu-toggle').click(function(){
+			$('.menu-toggle').toggleClass('active');
+			$('nav').toggleClass('active');
+		})
+	})
+</script>
+</head>
+<body>
+
+<header>
+	<div class="menu-toggle">
+		<span></span>
+		<span></span>
+		<span></span>
+	</div>
+	<nav>
+		<ul>
+			<li><a class="active1" href="HOME.html">Home</a></li>
+			<div class="dropdown">
+			<li><a class="dropbtn active" href="abc.html">Arts</a></li>
+					<div class="dropdown-content">
+						<a href="">Photographer</a>
+						<a href="">Musician</a>
+						<a href="">Painter</a>
+						<a href="">Dancer</a>
+						<a href="">Writer</a>
+						<a href="">Poet</a>
+					</div>
+					</div>
+			<li><a href="#">Progress</a></li>
+			<li><a href="#">Services</a></li>
+			<li><a href="#">Contact</a></li>
+		</ul>
+	</nav>
+</header>
+</body>
+</html>

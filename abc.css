@@ -1,0 +1,291 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+body
+{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	color: black;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	background: linear-gradient(#C9D6FF,#E2E2E2);
+	font-family: 'Poppins', sans-serif;
+}
+header
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+.menu-toggle
+{
+  width: 50px;
+  height: 50px;
+  background: rgba(255,255,255,.5);
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  z-index: 1;
+  transition: .5s;
+}
+.menu-toggle.active
+{
+  background: linear-gradient(#FFEFBA,#FFFFFF);
+}
+.menu-toggle span
+{
+  position: absolute;
+  display: block;
+  height: 4px;
+  background: #262626;
+  width: 60%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  transition: .5s;
+}
+.menu-toggle span:nth-child(1)
+{
+  top: 30%;
+}
+.menu-toggle span:nth-child(3)
+{
+  top: 70%;
+}
+.menu-toggle.active span:nth-child(1)
+{
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(45deg);
+}
+.menu-toggle.active span:nth-child(2)
+{
+  opacity: 0;
+}
+.menu-toggle.active span:nth-child(3)
+{
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%) rotate(-45deg);
+}
+nav
+{
+  position: absolute;
+  top: 0;
+  right: -100%;
+  height: 50px;
+  transition: .5s;
+}
+nav.active
+{
+  right: 50px;
+}
+nav ul
+{
+  margin: 0;
+  padding: 0;
+  background: transparent;
+  display: flex;
+}
+nav ul li
+{
+  list-style: none;
+}
+nav ul li a
+{
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px;
+  color: black;
+  text-decoration: none;
+  transition: .5s;
+}
+nav ul li a.active1
+{
+  background: linear-gradient(#FFEFBA,#FFFFFF);
+  font-weight: bold;
+}
+nav ul li a:hover
+{
+  background: linear-gradient(#FFEFBA,#FFFFFF);
+  font-weight: bold;
+}
+.dropbtn {
+  /*background-color: white;*/
+  color: black;
+  /*padding: 16px;
+  font-size: 20px;*/
+  border: none;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: fixed;
+  background-color: transparent;
+  min-width: 170px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  /*z-index: 1;*/
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 10px 10px;
+  text-decoration: none;
+  display: block;
+}
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: none;
+  background: linear-gradient(#FFEFBA,#FFFFFF);
+  /*text-decoration: black underline;*/
+  font-weight: bold;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+  background-color: transparent;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: none;
+  background: linear-gradient(#FFEFBA,#FFFFFF);
+  /*text-decoration: black underline;*/
+  font-weight: bold;
+}
+
+.container
+{
+	position: relative;
+	width: 90%;
+	margin-top: 200px;
+	margin-left: 60px;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	grid-template-rows: auto;
+	grid-gap: 0 40px;
+}
+.container .box
+{
+	position: relative;
+	height: 400px;
+	background: url('../Image/bg.jpg');
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border: 1px solid #000;
+}
+.container .box:before
+{
+	content: '';
+	position: absolute;
+	top: -2px;
+	left: -2px;
+	right: -2px;
+	bottom: -2px;
+	background: #fff;
+	transform: skew(2deg,2deg);
+	z-index: -1;
+}
+.container .box:nth-child(1):before
+{
+	background: linear-gradient(120deg,#0099F7,#F11712);
+}
+.container .box:nth-child(2):before
+{
+	background: linear-gradient(315deg,#0099F7,#F11712);	
+}
+.container .box:nth-child(3):before
+{
+	background: linear-gradient(120deg,#0099F7,#F11712);
+}
+.container .box:nth-child(4):before
+{
+	background: linear-gradient(315deg,#0099F7,#F11712);
+}
+.container .box:after
+{
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 50%;
+	height: 100%;
+	background: rgba(255,255,255,0.05);
+	pointer-events: none;
+}
+.content
+{
+	position: relative;
+	padding: 20px;
+	transform: translateY(40px);
+}
+.box .content h2
+{
+	position: absolute;
+	top: -60px;
+	right: 20px;
+	margin: 0;
+	padding: 0;
+	font-size: 140px;
+	color: black;
+	transition: 0.5s;
+}
+.box:hover .content h2
+{
+	top: -140px;
+}
+.box .content h3
+{
+	margin: 0 0 10px;
+	padding: 0;
+	font-size: 24px;
+	font-weight: 500;
+	color: black;
+}
+.box .content p
+{
+	margin: 0;
+	padding: 0;
+	color: black;
+	font-size: 16px;
+}
+.box .content a
+{
+	position: relative;
+	margin: 20px 0 0;
+	padding: 10px 20px;
+	text-decoration: none;
+	border: 1px solid black;
+	display: inline-block;
+	color: black;
+	transition: 0.5s;
+	transform: translateY(-40px);
+	opacity: 0;
+	visibility: hidden;
+}
+.box:hover .content a
+{
+	transform: translateY(0);
+	opacity: 1;
+	visibility: visible;
+}
+.box .content a:hover
+{
+	color: white;
+	background: black;
+}
